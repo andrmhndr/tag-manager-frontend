@@ -45,7 +45,7 @@ const BookEditPage = () => {
 
         const result = await updateBookApi({
           ...data,
-          tags: data.tags.map((value: any) => value.value),
+          tags: data?.tags?.map((value: any) => value.value),
         });
         if (result.success) {
           navigate.push(`/book/${result.data._id}`);

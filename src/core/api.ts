@@ -33,7 +33,7 @@ apiInstance.interceptors.response.use(
   (response) => response,
   async (error) => {
     console.error("API Error:", error.response?.data || error.message);
-    return Promise.reject(error); // ✅ Forward the error for handling in catch blocks
+    return Promise.reject(error);
   }
 );
 
@@ -58,7 +58,7 @@ export async function apiGet(
     const response = await apiInstance.get(url, { ...config, params });
     return response.data;
   } catch (error: any) {
-    throw error.response?.data || { message: "Unexpected GET request error" }; // ✅ Prevents undefined error
+    throw error.response?.data || { message: "Unexpected GET request error" };
   }
 }
 

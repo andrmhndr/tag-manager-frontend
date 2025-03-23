@@ -14,7 +14,7 @@ const AddBookPage = () => {
       onSubmit={async function (data: any): Promise<void> {
         const param = {
           ...data,
-          tags: data.tags.map((value: any) => value.value),
+          tags: data?.tags?.map((value: any) => value.value),
         };
 
         const result = await createBookApi(param);
