@@ -40,11 +40,11 @@ npm run dev
   ├── /book       # Book pages  
   │   ├── /[id]       # Book detail pages  
   │   │   ├── /edit   # Edit book pages  
-  │   ├── add.tsx     # Add new book page  
+  │   ├── /add     # Add new book page  
   ├── /tag        # Tag pages  
   │   ├── /[id]       # Tag detail pages  
   │   │   ├── /edit   # Edit tag pages  
-  │   ├── add.tsx     # Add new tag page  
+  │   ├── /add     # Add new tag page  
 /components/      # Global UI components  
 /core/           # API handlers & fetching system  
 /feature/        # Each feature environment (components, API, constants, etc.)  
