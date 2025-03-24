@@ -41,8 +41,6 @@ const BookEditPage = () => {
     <BookForm
       initial={initial.data}
       onSubmit={async function (data: any): Promise<void> {
-        console.log(JSON.stringify(data));
-
         const result = await updateBookApi({
           ...data,
           tags: data?.tags?.map((value: any) => value.value),

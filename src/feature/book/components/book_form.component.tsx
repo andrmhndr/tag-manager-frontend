@@ -6,6 +6,7 @@ import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import AsyncSelect from "react-select/async";
 import { CreateBookValidatorScheme } from "../validator/create_book.validator";
+import { debounce } from "lodash";
 
 interface Props {
   initial?: any;
@@ -59,7 +60,7 @@ export const BookForm = (props: Props) => {
               {...field}
               cacheOptions
               defaultOptions
-              loadOptions={async (input) => {
+              loadOptions={debounce(async (input, callback) => {
                 const result = await getTagSuggestionsApi({ search: input });
                 return result.data.map((value: any) => {
                   return {
@@ -67,7 +68,7 @@ export const BookForm = (props: Props) => {
                     value: value._id,
                   };
                 });
-              }}
+              }, 500)}
               isMulti
               placeholder="Search and select tags"
               className="w-full"
