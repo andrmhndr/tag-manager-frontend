@@ -8,8 +8,7 @@
 
 ### **1️⃣ Clone the Repository**  
 ```bash
-git clone https://github.com/username/tag-manager.git
-cd tag-manager
+git clone https://github.com/andrmhndr/tag-manager-frontend.git
 ```
 
 ### **2️⃣ Install Dependencies**  
@@ -36,20 +35,21 @@ npm run dev
 
 ## **📂 Project Structure**  
 ```
-/app
-  ├── layout.tsx   # Global layout
-  ├── /book        # Book pages
-      ├── /[id]       # Detail Book pages
-          ├── /edit       # Edit Book pages
-      ├── add.tsx       # Add Book pages
-  ├── /Tag        # Tag pages
-      ├── /[id]       # Detail Tag pages
-          ├── /edit       # Edit Tag pages
-      ├── add.tsx       # Add Tag pages
-/components/      # Global UI components
-/core/            # API handlers & fetching system
-/feature/         # Each feature environment (components, api, constant etc.)
-/hooks/           # Global Custom hooks
+/app               # Root directory for pages  
+  ├── layout.tsx  # Global layout  
+  ├── /book       # Book pages  
+  │   ├── /[id]       # Book detail pages  
+  │   │   ├── /edit   # Edit book pages  
+  │   ├── add.tsx     # Add new book page  
+  ├── /tag        # Tag pages  
+  │   ├── /[id]       # Tag detail pages  
+  │   │   ├── /edit   # Edit tag pages  
+  │   ├── add.tsx     # Add new tag page  
+/components/      # Global UI components  
+/core/           # API handlers & fetching system  
+/feature/        # Each feature environment (components, API, constants, etc.)  
+/hooks/          # Global custom hooks  
+
 ```
 
 ---
