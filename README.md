@@ -48,7 +48,7 @@ npm run dev
       ├── add.tsx       # Add Tag pages
 /components/      # Global UI components
 /core/            # API handlers & fetching system
-/feature/            # Each feature environment (components, api, constant etc.)
+/feature/         # Each feature environment (components, api, constant etc.)
 /hooks/           # Global Custom hooks
 ```
 
@@ -58,7 +58,6 @@ npm run dev
 ✅ **CRUD operations for Books & Tags**  
 ✅ **Server-Side Fetching for better SEO**  
 ✅ **Form Validation using React Hook Form & Yup**  
-✅ **Data Caching with SWR**  
 
 ---
 
@@ -162,6 +161,5 @@ export default function AddBookPage() {
 ## **🛠 Best Practices**  
 - Use **Server Actions** for critical data fetching.  
 - Validate forms with **React Hook Form & Yup**.  
-- Implement **SWR** for automatic data caching.  
 
 ---
