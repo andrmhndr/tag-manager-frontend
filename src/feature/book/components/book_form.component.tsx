@@ -60,15 +60,19 @@ export const BookForm = (props: Props) => {
               {...field}
               cacheOptions
               defaultOptions
-              loadOptions={debounce(async (input, callback) => {
-                const result = await getTagSuggestionsApi({ search: input });
-                return result.data.map((value: any) => {
-                  return {
-                    label: value.name,
-                    value: value._id,
-                  };
-                });
-              }, 500)}
+              loadOptions={
+                // debounce(
+                async (input, callback) => {
+                  const result = await getTagSuggestionsApi({ search: input });
+                  return result.data.map((value: any) => {
+                    return {
+                      label: value.name,
+                      value: value._id,
+                    };
+                  });
+                }
+                //   , 500)
+              }
               isMulti
               placeholder="Search and select tags"
               className="w-full"
