@@ -9,11 +9,10 @@ export interface BaseErrorResponse {
 
 export function handleApiError(error: any): BaseErrorResponse {
   return {
-    message:
-      error?.response?.data?.message ?? error.message ?? "An error occurred",
-    error: error?.response?.data?.error ?? null,
+    message: error?.message ?? error.message ?? "An error occurred",
+    error: error?.error ?? null,
     success: false,
-    statusCode: error?.response?.status ?? 400,
-    data: error?.response?.data ?? null,
+    statusCode: error?.statusCode ?? 400,
+    data: error?.data ?? null,
   };
 }

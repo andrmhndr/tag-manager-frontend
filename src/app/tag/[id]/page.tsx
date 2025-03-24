@@ -18,8 +18,9 @@ const DetailTagPage = async ({
     const tag = await getTagApi({ id: id });
     if (!tag.success)
       return (
-        <div className="flex min-h-screen justify-center items-center">
+        <div className="flex flex-col gap-3 min-h-screen justify-center items-center">
           <p>Tag not found</p>
+          <p>{JSON.stringify(tag)}</p>
         </div>
       );
 

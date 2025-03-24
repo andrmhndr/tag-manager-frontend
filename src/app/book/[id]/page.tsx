@@ -18,8 +18,9 @@ const DetailBookPage = async ({
 
     if (!book.success)
       return (
-        <div className="flex min-h-screen justify-center items-center">
+        <div className="flex flex-col gap-3 min-h-screen justify-center items-center">
           <p>Book not found</p>
+          <p>{JSON.stringify(book)}</p>
         </div>
       );
 

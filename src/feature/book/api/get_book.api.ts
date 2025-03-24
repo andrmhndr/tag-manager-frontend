@@ -10,6 +10,7 @@ export const getBookApi = async ({ id }: { id?: string } = {}) => {
     if (result.success) {
       return result;
     }
+
     throw result;
   } catch (error) {
     return handleApiError(error);
