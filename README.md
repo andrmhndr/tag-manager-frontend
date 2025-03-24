@@ -62,14 +62,19 @@ npm run dev
 ---
 
 ## **📡 API Endpoints**  
-| Method  | Endpoint     | Description        |  
-|---------|-------------|--------------------|  
-| `GET`   | `/tags`     | Fetch all tags     |  
-| `POST`  | `/tags`     | Create a new tag   |  
-| `PUT`   | `/tags/:id` | Update a tag       |  
-| `DELETE`| `/tags/:id` | Delete a tag       |  
-| `GET`   | `/books`    | Fetch all books    |  
-| `POST`  | `/books`    | Create a new book  |  
+| Method  | Endpoint            | Description                   |  
+|---------|---------------------|-------------------------------|  
+| `GET`   | `/tag`             | Fetch all tags                 |  
+| `GET`   | `/tag/:id`         | Fetch tag                      |  
+| `GET`   | `/tag/suggestions` | Fetch tag suggestions          |  
+| `POST`  | `/tag`             | Create a new tag               |  
+| `PUT`   | `/tag`             | Update a tag                   |  
+| `DELETE`| `/tag`             | Delete a tag                   |  
+| `GET`   | `/book`            | Fetch all books                |  
+| `GET`   | `/book/:id`        | Fetch book                     |  
+| `POST`  | `/book`            | Create a new book              |  
+| `PUT`   | `/book`            | update a book                  |  
+| `DELETE`| `/book`            | Delete a book                  |  
 
 ---
 
